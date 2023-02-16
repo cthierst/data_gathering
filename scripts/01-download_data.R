@@ -1,26 +1,24 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Data: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from NASA Astronomy Picture of the Day Link: https://apod.nasa.gov/apod/astropix.html
+# Author: Chloe Thierstein
+# Data: 16 February 2023
+# Contact: chlothier@gmail.com 
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Need to know where to find NASA Astronomy Picture of the Day
 
 
 #### Workspace setup ####
-library(opendatatoronto)
+library(httr)
 library(tidyverse)
-# [...UPDATE THIS...]
+library(xml2)
+
 
 #### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
+apod_2023_february_16 <-
+  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2023-02-16")
 
+content(apod_2023_february_16)$url |>
+  download.file(destfile = "inputs/apod_2023_february_16.jpg")
 
-
-#### Save data ####
-# [...UPDATE THIS...]
-# change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_data, "inputs/data/raw_data.csv") 
 
          

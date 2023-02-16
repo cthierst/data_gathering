@@ -1,0 +1,18 @@
+---
+title: "data_gathering"
+author: "Chloe Thierstein"
+format: pdf
+editor: visual
+---
+
+```{r}
+#| echo: false
+
+
+content(apod_2023_february_16)$title
+```
+
+```{r}
+
+include_graphics("https://apod.nasa.gov/apod/astropix.html")
+```
