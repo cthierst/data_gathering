@@ -1,0 +1,20 @@
+---
+title: "Data Gathering"
+author: "Chloe Thierstein"
+format: pdf
+editor: visual
+---
+
+```{r}
+library(httr)
+library(tidyverse)
+library(xml2)
+```
+
+```{r}
+include_graphics("https://apod.nasa.gov/apod/image/2302/ABELL1060_LRGB_NASA_1024.jpg")
+
+```
+
+```{}
+```

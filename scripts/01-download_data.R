@@ -21,4 +21,7 @@ content(apod_2023_february_16)$url |>
   download.file(destfile = "inputs/apod_2023_february_16.jpg")
 
 
-         
+content(apod_2023_february_16)$url
+
+
+tinytex::install_tinytex()
